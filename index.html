@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marci Metzger Homes - Revamp</title>
+   <!-- <link rel="stylesheet" href="/index.css">
+   <link rel="stylesheet" href="/responsive.css"> -->
+</head>
+<style>
+    * {
+    margin: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.header-img {
+    cursor: pointer;
+}
+
+:where(.header-img)>img {
+    width: 400px;
+    filter: contrast(200%);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.header-links {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+:where(.header-links)>a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+}
+.menu-links-container {
+    visibility: hidden;
+}
+:where(.header-links)>a:hover {
+    transform: scale(1.1);
+    transition: 400ms;
+}
+
+.call-details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    /* background-color: #6A9C89; */
+    background-image: url('https://wallpapers.com/images/hd/dream-house-pictures-1800-x-1200-yjphbmq6lkdrikdb.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 85vh;
+}
+
+:where(.call-details-info)>p {
+    font-size: 25px;
+    color: #fff;
+}
+
+:where(.call-details-info)>strong {
+    font-size: 45px;
+    color: #fff;
+
+}
+
+:where(.call-details-btn)>a,
+button {
+    padding: 15px;
+    width: 200px;
+    font-size: 15px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bolder;
+    cursor: pointer;
+    animation: 3s pulse indite;
+    margin-top: 5%;
+}
+.toggle-tel-no > strong {
+    color: #fff;
+}
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
+
+.call-details-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    text-align: center;
+}
+
+.data-img-context {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    color: #fff;
+}
+
+.data-img-context>img {
+    width: 300px;
+    /* border-radius: 50%; */
+}
+
+.data-img-context>strong {
+    font-size: 25px;
+}
+
+.data-img-title>strong {
+    font-size: 40px;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    place-content: center;
+    gap: 2em;
+}
+
+.first-data-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.second-data-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.first-data-section>p {
+    font-size: 18px;
+    margin-top: 3%;
+}
+
+.first-data-section>img {
+    width: 700px;
+    transform: rotate(-6deg);
+    box-shadow: 2px 2px 16px #000;
+}
+.second-data-section>p {
+    margin-top: 3%;
+}
+.second-data-section>img {
+    width: 700px;
+    transform: rotate(6deg);
+    box-shadow: 2px 2px 16px #000;
+}
+
+.container-wrapper {
+    margin-top: 5%;
+}
+
+:where(.container-wrapper-title)>h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.content-wrapper {
+    margin-top: 5%;
+}
+
+.second-data-section>p {
+    font-size: 18px;
+}
+
+.third-data-section>img {
+    width: 700px;
+    box-shadow: 2px 2px 16px #000;
+}
+
+.third-data-section>p {
+    font-size: 18px;
+    margin-top: 3%;
+
+}
+
+.find-dream-house-container {
+    margin-top: 5%;
+    padding: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('https://images.unsplash.com/photo-1625603736199-775425d2890a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZHJlYW0lMjBob3VzZXxlbnwwfHwwfHx8MA%3D%3D');
+}
+.form-container {
+    background-color: #1B56FD;
+    padding: 30px;
+    border-radius: 15px;
+    height: 50vh;
+}
+.form-content {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    gap: 2.5em;
+    color: #fff;
+    margin-top: 3%;
+}
+:where(.form-title) > h1 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 40px;
+    color: #fff;
+}
+.location-label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+:where(.location-label)>label {
+    font-weight: bold;
+    font-size: 15px;
+}
+:where(.location-label)>select {
+    width: 300px;
+    padding: 10px;
+    border: solid 3px #dddd;
+}
+.type-label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+:where(.type-label) > select {
+    width: 300px;
+    padding: 10px;
+    border: solid 3px #dddd;
+
+}
+:where(.type-label)>label {
+    font-weight: bold;
+    font-size: 15px;
+}
+.sort-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+:where(.sort-container) > select {
+    width: 300px;
+    padding: 10px;
+    border: solid 3px #dddd;
+}
+:where(.sort-container) > label {
+    font-weight: bold;
+    font-size: 15px;  
+}
+.bedrooms-context {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+}
+:where(.bedrooms-context) > select {
+    width: 300px;
+    padding: 10px;
+    border: solid 3px #dddd;
+}
+:where(.bedrooms-context) > label {
+    font-weight: bold;
+    font-size: 15px;
+}
+.bathrooms-context {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+:where(.bathrooms-context) > select {
+    width: 300px;
+    padding: 10px;
+    border: solid 3px #dddd;
+}
+:where(.bathrooms-context) > label {
+    font-weight: bold;
+    font-size: 15px;  
+}
+.min-price-context {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+}
+:where(.min-price-context) > label {
+    font-weight: bold;
+    font-size: 15px; 
+}
+:where(.min-price-context) > input[type='text'] {
+    width: 300px;
+    padding: 10px;
+    border: solid 3px #dddd;
+
+}
+.max-price-context {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+}
+:where(.max-price-context) > label {
+    font-weight: bold;
+    font-size: 15px; 
+}
+:where(.max-price-context) > input {
+    width: 300px;
+    padding: 10px;
+    border: solid 3px #dddd;
+}
+.btn-controllers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    margin-top: 5%;
+    
+}
+:where(.btn-submit) > input[type='submit'] {
+    padding: 10px;
+    font-weight: bold;
+    width: 150px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
+:where(.btn-reset) > input[type='reset'] {
+    padding: 10px;
+    font-weight: bold;
+    width: 150px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5em;
+    padding: 50px;
+    background-color: #9FB3DF;
+    width: 100%;
+}
+.slider-title > h1 {
+    font-weight: bold;
+    font-size: 40px;
+}
+.slider {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    width: 800px;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  :where(.flex-img-slider) > img {
+    width: 85px;
+    cursor: pointer;
+  }
+  :where(.flex-img-slider) > img:hover {
+    opacity: 0.7;
+    transition: 500ms;
+  }
+
+  .real-estate-info-data {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 4em;
+    margin-top: 5%;
+  }
+:where(.real-estate-info-data) > img {
+    width: 400px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 150px;
+    box-shadow: 2px 2px 12px #000;
+}
+.real-estate-context {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+:where(.real-estate-context) > strong {
+    font-size: 24px;
+}
+:where(.real-estate-context) > p {
+    font-size: 18px;
+    letter-spacing: normal;
+}
+.commercial-info-data {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 3em;
+}
+.commercial-info-data > img {
+    width: 400px;   
+    border-top-left-radius: 150px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius:5px;
+    box-shadow: 2px 2px 12px #000;
+}
+:where(.commercial-info-context) > strong {
+    font-size: 24px;
+}
+:where(.commercial-info-context) > p {
+    font-size: 18px;
+    letter-spacing: normal;
+    margin-top: 2%;
+}
+.expertise-info-data {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 3em; 
+}
+.expertise-info-data > img {
+    width: 400px;   
+    border-top-left-radius: 5px;
+    border-top-right-radius: 150px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius:5px;
+    box-shadow: 2px 2px 12px #000;
+}
+:where(.expertise-info-context) > strong {
+    font-size: 24px;
+}
+:where(.expertise-info-context) > p {
+    font-size: 18px;
+    letter-spacing: normal;
+    margin-top: 2%;
+}
+.footer-title > h1 {
+    font-size: 40px;
+}
+.footer-container {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5em;
+    margin-top: 5%;
+}
+.msg-label-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.message-webpage-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;   
+}
+.office-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em; 
+}
+.label-name {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+:where(.label-name) > input[type='text'] {
+    padding: 10px;
+    border: solid 3px #dddd;
+    width: 250px;
+}
+:where(.label-name) > label {
+    font-weight: bold;
+}
+.label-email {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+:where(.label-email) > label {
+    font-weight: bold;
+}
+:where(.label-email) > input[type='email'] {
+    padding: 10px;
+    border: solid 3px #dddd;
+    width: 250px;
+}
+:where(.label-msg) > label {
+    font-weight: bold;
+}
+:where(.label-msg) > textarea {
+    padding: 15px;
+    width: 300px;
+}
+.label-msg {
+    display: flex;
+    align-items: center;   
+    gap: 5px;
+}
+.whats-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 10px;
+    background-color: #00712D;
+    cursor: pointer;
+    border-radius: 30px;
+    color: #fff;
+}
+.whats-app:hover {
+    opacity: 0.8;
+    transition: 300ms;
+}
+.our-services-title > h1 {
+    text-align:center ;
+    font-size: 40px;
+    margin-top: 3%;
+}
+.btn-send {
+   border: none;
+   background-color: #000;
+   color: #fff;
+   padding: 10px;
+   width: 150px;
+   font-weight: bold;
+   border-radius: 30px;
+   cursor:not-allowed;
+   opacity: 0.5;
+
+}
+.map-container-wrapper {
+    margin-top: 5%;
+}
+.socmed-platforms-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    margin-top: 5%;
+} 
+.socmed-platforms-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+.copyright-website > small {
+    font-size: 15px;
+    font-weight: bold;
+}
+.hr-separator {
+    display: flex;
+    align-items: center;
+    gap: 4em;
+    margin-top: 10%;
+}
+:where(.hr-separator) > hr:nth-child(1) {
+    width: 500px;
+    border-top: 2px solid #000;
+}
+:where(.hr-separator) > hr:nth-child(2) {
+    width: 500px;
+    border-top: 2px solid #000;
+}
+:where(.fb) > svg {
+    cursor: pointer;
+}
+:where(.fb) > svg:hover {
+    transform: scale(1.2);
+}
+:where(.instagram) > svg {
+    cursor: pointer;
+}
+:where(.instagram) > svg:hover {
+    transform: scale(1.2);
+}
+:where(.linkdin) > svg {
+    cursor: pointer;
+}
+:where(.linkdin) > svg:hover {
+    transform: scale(1.2);
+}
+:where(.yelp) > svg:hover {
+    transform: scale(1.2);  
+}
+:where(.yelp) > svg {
+    cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+    .call-details-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+        background-color: #000;
+        background-image: none;
+        width: 100%;
+        object-fit: cover;
+  
+    }
+    .form-container {
+        background-color: #1B56FD !important;
+        height: 100vh !important;
+        width: 120%;
+    }
+    .call-details-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+    }
+    .header-links {
+        visibility: hidden;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .header-img>img {
+        width: 150px;
+    }
+
+    .menu-links-container {
+        /* visibility: visible; */
+    }
+    .data-img-context > img {
+        width: 200px;
+    }
+    .data-img-context > strong {
+        font-size: 14px;
+    }
+    .call-details-info > p {
+        font-size: 14px; 
+    }
+    .call-details-info > strong {
+       font-size: 15px;
+    }
+    .container-wrapper {
+    }
+    .content-wrapper {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+        gap: 2em;
+    }
+    .first-data-section > img {
+        width: 400px;
+        transform: rotate(0deg);
+    }
+    .first-data-section > p {
+        font-size: 15px;
+        margin-top: 2%;
+    }
+    .second-data-section > img {
+        width: 400px;
+        transform: rotate(0deg);
+    }
+    .third-data-section > img {
+        width: 400px;
+    }
+    .form-container {
+        background-color: #60B5FF;
+        object-fit: cover;
+    }
+    .form-title > h1 {
+        font-size: 30px;
+        color: #000;
+        text-align: center;
+    }
+    .form-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+        color: #fff;
+    }
+    .find-dream-house-container {
+        background-image: none;
+    }
+    .slider-container {
+       /* position: relative; */
+       margin-top: 50%;
+    }
+    .location-label > select {
+        width: 200px;
+    }
+    .type-label > select {
+        width: 200px;
+    }
+    .sort-container > select {
+        width: 200px;
+    }
+    .bedrooms-context > select {
+        width: 200px;
+    }
+    .bathrooms-context > select {
+        width: 200px;
+    }
+    .bathrooms-context > select {
+        width: 200px;
+    }
+    .min-price-context > input {
+        width: 200px;
+    }
+    .max-price-context > input {
+        width: 200px;
+
+    }
+    .services-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3em;
+        margin-top: 5%;
+      }
+      .real-estate-info-data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+      }
+      .real-estate-info-data > img {
+        width: 300px;
+      }
+      .real-estate-context > strong {
+        font-size: 19px;
+      }
+      .real-estate-context > p {
+        font-size: 15px;
+      }
+      .commercial-info-data {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 2em
+      }
+      .commercial-info-data > img {
+        width: 300px;
+      }
+      .commercial-info-context > strong {
+        font-size: 19px;
+      }
+      .commercial-info-context > p {
+        font-size: 15px;
+      }
+      .expertise-info-data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+      }
+      .expertise-info-data > img {
+        width: 300px;
+      }
+      .expertise-info-context > strong {
+        font-size: 19px;
+      }
+      .expertise-info-context > p {
+        font-size: 15px;
+      }
+      .footer-content {
+        display: flex;
+       flex-direction: column-reverse;
+        align-items: center;
+        gap: 5em;
+        margin-top: 5%;
+    }
+    .whats-app {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        padding: 10px;
+        background-color: #00712D;
+        cursor: pointer;
+        border-radius: 30px;
+        color: #fff;
+        width: 200px;
+        margin-top: 3%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+.hr-separator {
+    display: flex;
+    align-items: center;
+    gap: 4em;
+}
+:where(.hr-separator) > hr:nth-child(1) {
+    width: 200px;
+    border-top: 2px solid #000;
+}
+:where(.hr-separator) > hr:nth-child(2) {
+    width: 200px;
+    border-top: 2px solid #000;
+}
+
+}
+</style>
+
+<script type="text/javascript" src="/index.js" defer></script>
+<body id="root">
+    <header class="header-container">
+        <div class="menu-links-container">
+            <a href="">HOME</a>
+            <a href="">LISTINGS</a>
+            <a href="">LET'S MOVE</a>
+            <a href="">ABOUT US</a>
+        </div>
+        <div class="header-img">
+            <img
+                src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/blob-6c0c2e0.png/:/rs=w:1071,h:334,cg:true,m/cr=w:1071,h:334/qt=q:95" />
+        </div>
+        <div class="header-links">
+            <a href="#home">HOME</a>
+            <a href="#listing">LISTINGS</a>
+            <a href="#letsmove">LET'S MOVE</a>
+            <a href="#about">ABOUT US</a>
+        </div>
+    </header>
+    <div class="call-details-container">
+        <div class="data-img-context">
+            <div class="data-img-title">
+                <strong>MARCI METZGER</strong>
+            </div>
+            <img
+                src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/photo-5db79f9.jpg/:/cr=t:14.65%25,l:0%25,w:100%25,h:66.64%25/rs=w:730,h:730,cg:true" />
+            <strong>REALTOR FOR NEARLY 3 DECADES!</strong>
+        </div>
+        <div class="call-details-content">
+            <div class="call-details-info">
+                <p>MARCI METZGER - THE RIDGE REALTY GROUP</p>
+                <br />
+                <br />
+                <strong>PAHRUMP REALTOR</strong>
+            </div>
+            <div class="call-details-btn">
+                <a href="tel:(206) 919-6886">
+                    <button>CALL NOW</button>
+                </a>
+            </div>
+            <div class="toggle-tel-no">
+                <strong id="show__telno"></strong>
+            </div>
+        </div>
+    </div>
+    <div class="container-wrapper">
+        <div class="container-wrapper-title">
+            <h1>GET IT SOLD</h1>
+        </div>
+        <div class="content-wrapper">
+            <div class="first-data-section">
+                <img
+                    src="https://img1.wsimg.com/isteam/stock/3395/:/cr=t:11.02%25,l:0%25,w:100%25,h:77.95%25/rs=w:1200,h:600,cg:true" />
+                <p><b>Top Residential Sales Last 5 Years</b></p>
+                <p>We helped nearly 90 clients in 2021, and closed 28.5 million in sales!
+                    <br />
+                    Our team works hard everyday to grow and learn, so that we may continue to
+                    <br />
+                    excel in our market. Our clients deserve our best, & we want to make sure our
+                    <br />
+                    best is better every year.
+                </p>
+            </div>
+            <div class="second-data-section">
+                <img src="https://img1.wsimg.com/isteam/stock/107927/:/rs=w:1200,h:600,cg:true,m/cr=w:1200,h:600" />
+                <p><b>Don't Just List it...</b></p>
+                <p>Get it SOLD! We exhaust every avenue to ensure our listings are at the</p>
+                <p>fingertips of every possible buyer, getting you top dollar for your home.</p>
+            </div>
+            <div class="third-data-section">
+                <img
+                    src="https://img1.wsimg.com/isteam/stock/771/:/cr=t:5.36%25,l:1.76%25,w:96.47%25,h:89.29%25/rs=w:1200,h:600,cg:true,m" />
+                <p><b>Guide to Buyers</b></p>
+                <p>Nobody knows the market like we do. Enjoy having a pro at your service.
+                    <br />
+                    Market analysis, upgrades lists, contractors on speed dial, & more!
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="find-dream-house-container">
+        <div class="find-dream-house-content">
+            <form action="" class="form-container" method="POST">
+                <div class="form-title">
+                    <h1>SEARCH LISTINGS</h1>
+                </div>
+                <div class="form-content">
+                    <div class="location-label">
+                        <label>Location:</label>
+                        <select id="">
+                            <option value="">Null</option>
+                        </select>
+                    </div>
+                    <div class="type-label">
+                        <label>Type:</label>
+                        <select id="">
+                            <option value="">Null</option>
+                        </select>
+                    </div>
+                    <div class="sort-container">
+                        <label for="">Sort By</label>
+                        <select id="">
+                            <option value="">Newest</option>
+                            <option value="">Oldest</option>
+                            <option value="">Least Expensive to Most</option>
+                            <option value="">Most Expensive to Least</option>
+                            <option value="">Bedrooms (Low to High)</option>
+                            <option value="">Bedrooms (High to Low)</option>
+                            <option value="">Bathrooms (Low to High)</option>
+                            <option value="">Bathrooms (High to Low)</option>
+                        </select>
+                    </div>
+                    <div class="bedrooms-context">
+                        <label for="Bathrooms">Bathrooms</label>
+                        <select name="" id="">
+                            <option value="null">Null</option>
+                            <option value="studio">Studio</option>
+                            <option value="1">+1</option>
+                            <option value="2">+2</option>
+                            <option value="3">+3</option>
+                            <option value="4">+4</option>
+                            <option value="5">+5</option>
+                            <option value="6">+6</option>
+                        </select>
+                    </div>
+                    <div class="bathrooms-context">
+                        <label for="Bathrooms">Bathrooms</label>
+                        <select name="" id="">
+                            <option value="null">
+                                Null
+                            </option>
+                            <option value="1">
+                                +1
+                            </option>
+                            <option value="2">
+                                +2
+                            </option>
+                            <option value="3">
+                                +3
+                            </option>
+                            <option value="4">
+                                +4
+                            </option>
+                            <option value="5">
+                                +5
+                            </option>
+                            <option value="6">
+                                +6
+                            </option>
+                        </select>
+                    </div>
+                    <div class="min-price-context">
+                        <label for="">Min Price</label>
+                        <input type="text">
+                    </div>
+                    <div class="max-price-context">
+                        <label for="">Max Price</label>
+                        <input type="text">
+                    </div>
+                    <div class="btn-controllers">
+                        <div class="btn-submit">
+                            <input type="submit" value="Search Now" disabled="true">
+                        </div>
+                        <div class="btn-reset">
+                            <input type="reset" value="Cancel">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="slider-container">
+        <div class="slider-title">
+            <h1>PHOTO GALLERY</h1>
+        </div>
+        <div class="slider">
+            <div class="slides">
+                <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4460%20Roseworthy-52.jpg-SMALL.JPG/:/rs=w:984,h:655"
+                    class="slide" alt="Image 1">
+                <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-14.jpg-SMALL.JPG/:/cr=t:0%25,l:0.05%25,w:99.9%25,h:99.9%25/rs=w:984,h:655"
+                    class="slide" alt="Image 2">
+                <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-45.jpg-SMALL.JPG/:/rs=w:984,h:655"
+                    class="slide" alt="Image 3">
+                <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-50.jpg-SMALL.JPG/:/rs=w:984,h:655"
+                    class="slide" alt="Image 4">
+                <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-54.jpg-SMALL.JPG/:/rs=w:984,h:655"
+                    class="slide" alt="Image 5">
+            </div>
+
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+        <div class="flex-img-slider">
+            <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4460%20Roseworthy-52.jpg-SMALL.JPG/:/rs=w:984,h:655"
+                alt="">
+            <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-14.jpg-SMALL.JPG/:/cr=t:0%25,l:0.05%25,w:99.9%25,h:99.9%25/rs=w:984,h:655"
+                alt="">
+            <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-45.jpg-SMALL.JPG/:/rs=w:984,h:655"
+                alt="">
+            <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-50.jpg-SMALL.JPG/:/rs=w:984,h:655"
+                alt="">
+            <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-54.jpg-SMALL.JPG/:/rs=w:984,h:655"
+                alt="">
+        </div>
+    </div>
+    <div class="services-container">
+        <div class="our-services-title">
+            <h1>OUR SERVICES</h1>
+        </div>
+        <div class="services-content">
+            <div class="real-estate-info-data">
+                <img src="https://img1.wsimg.com/isteam/stock/12792/:/rs=w:730,h:730,cg:true,m/cr=w:730,h:730" />
+                <div class="real-estate-context">
+                    <strong>Real Estate Done Right</strong>
+                    <p>Nervous about your property adventure? Don’t be.
+                        <br />
+                        Whether you're getting ready to buy or sell your
+                        <br />
+                        residence, looking at investment properties, or
+                        <br />
+                        just curious about the markets, our team ensures
+                        <br />
+                        you get the best experience possible!
+                    </p>
+                </div>
+            </div>
+            <div class="commercial-info-data">
+                <div class="commercial-info-context">
+                    <strong>Commercial & Residential</strong>
+                    <p>Large or small, condo or mansion, we can find it
+                        <br />
+                        and get at the price that's right. Fixer-uppers?
+                        <br />
+                        Luxury? We can help with all of it! We live, work,
+                        <br />
+                        and play in this community. Happy to help you
+                        <br />
+                        find where to put you hard-earned dollars.
+                    </p>
+                </div>
+                <img src="https://img1.wsimg.com/isteam/stock/43920/:/rs=w:730,h:730,cg:true,m/cr=w:730,h:730" />
+            </div>
+            <div class="expertise-info-data">
+                <img src="https://img1.wsimg.com/isteam/stock/kayaJdA/:/rs=w:730,h:730,cg:true,m/cr=w:730,h:730" />\
+                <div class="expertise-info-context">
+                    <strong>Rely on Expertise</strong>
+                    <p>
+                        If you have questions about affordability, credit,
+                        <br />
+                        and loan options, trust us to connect you with the
+                        <br />
+                        right people to get the answers you need in a
+                        <br />
+                        timely fashion. We make sure you feel confident
+                        <br />
+                        and educated every step of the way.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-container">
+        <div class="footer-title">
+            <h1>CALL OR VISIT</h1>
+        </div>
+        <div class="footer-content">
+            <form class="msg-label-content">
+                <div class="msg-title">
+                    <h2>Send Message</h2>
+                </div>
+                <div class="label-name">
+                    <label for="name">Name</label>
+                    <input type="text" id="name__get__data" required>
+                </div>
+                <div class="label-email">
+                    <label for="email">Email</label>
+                    <input type="email" id="email__get__data" required>
+                </div>
+                <div class="label-msg">
+                    <label for="message">Message</label>
+                    <textarea id="msg__get__data" required></textarea>
+                </div>
+                <input class="btn-send" type="submit" value="Send">
+            </form>
+            <div class="message-webpage-info-container">
+                <div class="whats-app" id="route__whatsapp">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
+                        class="bi bi-whatsapp" viewBox="0 0 16 16">
+                        <path
+                            d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                    </svg>
+                    <strong>
+                        Message us on WhatsApp
+                    </strong>
+                </div>
+                <div class="office-info">
+                    <strong>
+                        Marci Metzger - THE RIDGE REALTY GROUP
+                    </strong>
+                    <div class="office-address">
+                        <p>
+                            3190 HW-160, Suite F, Pahrump, Nevada 89048, United States
+                        </p>
+                    </div>
+                    <div class="office-telephone">
+                        <a href="tel: (206) 919-6886">(206) 919-6886</a>
+                    </div>
+                    <div class="office-hrs">
+                        <strong>
+                            Office Hours
+                        </strong>
+                        <p>
+                            Open daily 8:00 am - 7:00 pm
+                            <br />
+                            Appointments outside office hours available upon request. Just call!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hr-separator">
+            <hr>
+            <hr>
+        </div>
+        <div class="socmed-platforms-container">
+            <div class="copyright-website">
+               <small>
+                Copyright © 2023 Marci METZGER Homes - All Rights Reserved
+               </small>
+            </div>
+            <div class="socmed-platforms-content">
+                <div class="fb" onclick="routeToFB()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                    </svg>
+                </div>
+                <div class="instagram" onclick="routeToIG()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                    </svg>
+                </div>
+                <div class="linkdin" onclick="routeToLD()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-linkedin" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                    </svg>
+                </div>
+                    <div class="yelp" onclick="routeToYelp()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-yelp" viewBox="0 0 16 16">
+                            <path
+                                d="m4.188 10.095.736-.17.073-.02A.813.813 0 0 0 5.45 8.65a1 1 0 0 0-.3-.258 3 3 0 0 0-.428-.198l-.808-.295a76 76 0 0 0-1.364-.493C2.253 7.3 2 7.208 1.783 7.14c-.041-.013-.087-.025-.124-.038a2.1 2.1 0 0 0-.606-.116.72.72 0 0 0-.572.245 2 2 0 0 0-.105.132 1.6 1.6 0 0 0-.155.309c-.15.443-.225.908-.22 1.376.002.423.013.966.246 1.334a.8.8 0 0 0 .22.24c.166.114.333.129.507.141.26.019.513-.045.764-.103l2.447-.566zm8.219-3.911a4.2 4.2 0 0 0-.8-1.14 1.6 1.6 0 0 0-.275-.21 2 2 0 0 0-.15-.073.72.72 0 0 0-.621.031c-.142.07-.294.182-.496.37-.028.028-.063.06-.094.089-.167.156-.353.35-.574.575q-.51.516-1.01 1.042l-.598.62a3 3 0 0 0-.298.365 1 1 0 0 0-.157.364.8.8 0 0 0 .007.301q0 .007.003.013a.81.81 0 0 0 .945.616l.074-.014 3.185-.736c.251-.058.506-.112.732-.242.151-.088.295-.175.394-.35a.8.8 0 0 0 .093-.313c.05-.434-.178-.927-.36-1.308M6.706 7.523c.23-.29.23-.722.25-1.075.07-1.181.143-2.362.201-3.543.022-.448.07-.89.044-1.34-.022-.372-.025-.799-.26-1.104C6.528-.077 5.644-.033 5.04.05q-.278.038-.553.104a8 8 0 0 0-.543.149c-.58.19-1.393.537-1.53 1.204-.078.377.106.763.249 1.107.173.417.41.792.625 1.185.57 1.036 1.15 2.066 1.728 3.097.172.308.36.697.695.857q.033.015.068.025c.15.057.313.068.469.032l.028-.007a.8.8 0 0 0 .377-.226zm-.276 3.161a.74.74 0 0 0-.923-.234 1 1 0 0 0-.145.09 2 2 0 0 0-.346.354c-.026.033-.05.077-.08.104l-.512.705q-.435.591-.861 1.193c-.185.26-.346.479-.472.673l-.072.11c-.152.235-.238.406-.282.559a.7.7 0 0 0-.03.314c.013.11.05.217.108.312q.046.07.1.138a1.6 1.6 0 0 0 .257.237 4.5 4.5 0 0 0 2.196.76 1.6 1.6 0 0 0 .349-.027 2 2 0 0 0 .163-.048.8.8 0 0 0 .278-.178.7.7 0 0 0 .17-.266c.059-.147.098-.335.123-.613l.012-.13c.02-.231.03-.502.045-.821q.037-.735.06-1.469l.033-.87a2.1 2.1 0 0 0-.055-.623 1 1 0 0 0-.117-.27Zm5.783 1.362a2.2 2.2 0 0 0-.498-.378l-.112-.067c-.199-.12-.438-.246-.719-.398q-.644-.353-1.295-.695l-.767-.407c-.04-.012-.08-.04-.118-.059a2 2 0 0 0-.466-.166 1 1 0 0 0-.17-.018.74.74 0 0 0-.725.616 1 1 0 0 0 .01.293c.038.204.13.406.224.583l.41.768q.341.65.696 1.294c.152.28.28.52.398.719q.036.057.068.112c.145.239.261.39.379.497a.73.73 0 0 0 .596.201 2 2 0 0 0 .168-.029 1.6 1.6 0 0 0 .325-.129 4 4 0 0 0 .855-.64c.306-.3.577-.63.788-1.006q.045-.08.076-.165a2 2 0 0 0 .051-.161q.019-.083.029-.168a.8.8 0 0 0-.038-.327.7.7 0 0 0-.165-.27" />
+                        </svg>
+                    </div>
+            </div>
+        </div>
+    </footer>
+    <div class="map-container-wrapper">
+        <div style="position: relative;">
+            <div style="position: relative; padding-bottom: 75%; height: 0; overflow: hidden;"><iframe
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 45%; border:0;" loading="lazy"
+                    allowfullscreen
+                    src="https://maps.google.com/maps?q=3190+NV-160+Suite+F%2C+Pahrump%2C+NV+89048%2C+USA&output=embed"></iframe>
+            </div><a href="https://mapembeds.com" rel="noopener" target="_blank"
+                style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;">mapembeds.com</a>
+        </div>
+    </div>
+
+    <script type="text/javascript" defer>
+        let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    
+    function showSlide(index) {
+      const slidesContainer = document.querySelector('.slides');
+      const totalSlides = slides.length;
+    
+      if (index >= totalSlides) {
+        currentIndex = 0;
+      } else if (index < 0) {
+        currentIndex = totalSlides - 1;
+      } else {
+        currentIndex = index;
+      }
+    
+      const offset = -currentIndex * 600; // slide width
+      slidesContainer.style.transform = `translateX(${offset}px)`;
+    }
+    
+    function nextSlide() {
+      showSlide(currentIndex + 1);
+    }
+    
+    function prevSlide() {
+      showSlide(currentIndex - 1);
+    }
+    
+    showSlide(currentIndex); 
+    
+    var name = document.getElementById('name__get__data');
+    var email = document.getElementById('email__get__data');
+    var msg = document.getElementById('msg__get__data');
+    var btnSend = document.querySelector('.btn-send');
+    
+    if(name.value !== '' ) {
+      btnSend.style.cursor = 'pointer';
+      btnSend.style.opacity = '1.5';
+    }
+    
+    const btnSendData = () => {
+    var name = document.getElementById('name__get__data').value;
+    var email = document.getElementById('email__get__data');
+    var msg = document.getElementById('msg__get__data');
+    var btnSend = document.querySelector('.btn-send');
+    
+     
+    }
+    
+    var routeWhatsApp = document.getElementById('route__whatsapp');
+    routeWhatsApp.addEventListener('click' , () => {
+    var path = 'https://www.whatsapp.com/';
+    
+    setTimeout(() => {
+      window.location.href = path;
+    }, 500);
+    });
+    
+    var callDetailNo = document.querySelector('.call-details-btn');
+    callDetailNo.addEventListener('mouseenter', () => {
+    var telNo = 'Call: 206-919-6886';
+    var showTelNo = document.getElementById('show__telno');
+    showTelNo.innerHTML = `${telNo}`;
+    });
+    
+    var callDetailRemove= document.querySelector('.call-details-btn');
+    callDetailRemove.addEventListener('mouseleave', () => {
+    var showTelNo = document.getElementById('show__telno');
+    showTelNo.innerHTML = '';
+    });
+    
+    const routeToFB = () => {
+      var pathFB = 'https://www.facebook.com/MarciHomes/';
+     setTimeout(() => {
+      window.location.href = `${pathFB}`;
+     }, 500);
+    }
+    
+    const routeToIG = () => {
+      var pathIG = 'https://www.instagram.com/marciandlauren_nvrealtors/';
+     setTimeout(() => {
+      window.location.href = `${pathIG}`;
+     }, 500);
+    }
+    
+    const routeToLD = () => {
+      var pathLD = 'https://www.linkedin.com/in/marci-metzger-30642496/';
+     setTimeout(() => {
+      window.location.href = `${pathLD}`;
+     }, 500);
+    }
+    
+    const routeToYelp = () => {
+      var pathYelp = 'https://www.yelp.com/biz/marci-metzger-the-ridge-realty-pahrump';
+     setTimeout(() => {
+      window.location.href = `${pathYelp}`;
+     }, 500);
+    }
+    </script>
+</body>
+
+</html>
